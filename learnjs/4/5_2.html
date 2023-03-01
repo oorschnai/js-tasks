@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Calculator() {
+    this.value1 = undefined;
+    this.value2 = undefined;
+    this.read = function () {
+      let value1 = +prompt("Введите первое значение:", "");
+      let value2 = +prompt("Введите второе значение:", "");
+      this.value1 = value1;
+      this.value2 = value2;
+    };
+    this.sum = function () {
+      return this.value1 + this.value2;
+    };
+    this.mul = function () {
+      return this.value1 * this.value2;
+    };
+  }
+
+  let calculator = new Calculator();
+  calculator.read();
+
+  alert( "Sum=" + calculator.sum() );
+  alert( "Mul=" + calculator.mul() );
+</script>
+</body>
+</html>
